@@ -1,0 +1,215 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-family: 'Poppins', 'Roboto', sans-serif; /* Modern, sleek font */
+    line-height: 1.7;
+    background: linear-gradient(135deg, #141414, #2b2b2b); /* Dark gradient background */
+    color: #e0e0e0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #0077cc, #00e5ff); /* Cool gradient background */
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #00e5ff;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Styling - Rounded Box for Heading + Text */
+section {
+    margin: 40px auto;
+    padding: 2rem;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border-radius: 15px; /* Rounded corners for the entire section box */
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+section h2 {
+    font-size: 2.2rem;
+    color: #00e5ff;
+    margin-bottom: 1rem;
+    padding: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Slight background contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+section h2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+section p,
+section ul {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+.content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content img {
+    max-width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #00e5ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.content img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Skills Section */
+#skills .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+#skills ul {
+    list-style-type: square;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #333, #141414);
+    color: #e0e0e0;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 40px;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+    color: #00e5ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #00e5ff;
+    color: #141414;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 229, 255, 0.3);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    #skills .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
